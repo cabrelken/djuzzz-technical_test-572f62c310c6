@@ -14,7 +14,21 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::All();
+         $users = User::All();
+        // withcount():fonction prédefinie qui compte le nombre de ligne de la table associative
+      
+        // $users = User::join('training_user', 'users.id', '=', 'training_user.user_id')
+        // ->join('trainings', 'trainings.id', '=', 'training_user.training_id')
+        // // ->orderByRaw('SUM(price)')
+        // // ->groupBy('training_user.user_id')
+        // ->get();
+
+        //$users = User::select('users.*','training_user.*', 'trainings.*', 'users.id As idUser', 'trainings.price As prices', Training::raw('SUM(trainings.price) as TotalDeposits'))
+         //->leftJoin('training_user', 'training_user.user_id', '=', 'users.id')
+        // ->leftJoin('trainings', 'training_user.training_id', '=', 'trainings.id')
+         //->groupby('training_user.user_id')
+         //->get();
+
         return response()->json($users);
 
     }

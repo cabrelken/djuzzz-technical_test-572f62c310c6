@@ -72,7 +72,7 @@
                 <td>
                   <div class="d-flex justify-content-center">
                     <!-- Color of the training -->
-                      <div class="w-25px h-25px border border-1" style="width:25px; height:25px;" :style="'background-color:'+'black'"></div>
+                      <div class="w-25px h-25px border border-1" style="width:25px; height:25px;" :style="'background-color:'+training.color"></div>
                   </div>
                 </td>
                 <td>
@@ -83,6 +83,7 @@
                 </td>
                 <td>{{training.price}}Є</td>
                 <td>{{training.users_count}}</td>
+                
                 <td>
                   <!-- [IF training is_active == 1] -->
                   <button

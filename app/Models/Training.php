@@ -58,7 +58,7 @@ class Training extends Model
      * @var array
      */
     protected $hidden = [
-        'color',
+        // 'color',
         // 'password',
         // 'remember_token',
     ];
