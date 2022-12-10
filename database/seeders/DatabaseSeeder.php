@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
                 }
                 $listRandNumber[] = $rand_id;
 
-                DB::table('trainings_users')->insert([
+                DB::table('training_user')->insert([
                     'user_id' => $user->id,
                     'training_id' => $rand_id
                 ]);

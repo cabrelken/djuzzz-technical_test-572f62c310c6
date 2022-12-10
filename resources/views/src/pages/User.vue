@@ -9,62 +9,6 @@
         :nbTraining="'[Number of user\'s training]'"
         :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
       ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
-      <UserCard
-        :name="'[User name]'"
-        position="Utilisateur"
-        :initials="'[initials of user]'"
-        :nbTraining="'[Number of user\'s training]'"
-        :priceTrainingTotal="'[Sum of user\'s training\'s price]'+' €'"
-      ></UserCard>
 
     </div>
   </div>

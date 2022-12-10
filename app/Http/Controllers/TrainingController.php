@@ -16,6 +16,12 @@ class TrainingController extends Controller
     public function index()
     {
          $trainings = Training::All();
+
+         
+
+         $trainings = Training::withCount('users')->get();
+
+
          return response()->json($trainings);
 
         //$trainings = null;

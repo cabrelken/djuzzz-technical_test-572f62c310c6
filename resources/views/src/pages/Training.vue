@@ -82,7 +82,7 @@
                   <div v-else-if ="training.is_active == 0" class="badge badge-sm badge-danger">Desactivé</div>
                 </td>
                 <td>{{training.price}}Є</td>
-                <td>[Number of training's users]</td>
+                <td>{{training.users_count}}</td>
                 <td>
                   <!-- [IF training is_active == 1] -->
                   <button

@@ -73,8 +73,9 @@ class Training extends Model
 
     public function users()
     {
-        //[Liste des utilisateurs participant aux formations]
+        return $this->belongsToMany(User::class);   
     }
 
+    
    
 }
