@@ -24,3 +24,5 @@ Route::get('/trainings',[TrainingController::class, 'index'])->name('trainings')
 //Route::get('/trainings', 'TrainingController@index');
 
 Route::get('/users',[UserController::class, 'index'])->name('users');
+
+Route::get('/training_user/{id}',[UserController::class, 'training_user'])->name('training_user');

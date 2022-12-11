@@ -18,7 +18,7 @@ class TrainingController extends Controller
         //  $trainings = Training::All();
 
          
-
+        // withcount():fonction prédefinie qui compte le nombre de ligne de la table associative
          $trainings = Training::withCount('users')->get();
 
 

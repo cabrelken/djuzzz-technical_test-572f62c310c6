@@ -73,6 +73,7 @@
                   <div class="d-flex justify-content-center">
                     <!-- Color of the training -->
                       <div class="w-25px h-25px border border-1" style="width:25px; height:25px;" :style="'background-color:'+training.color"></div>
+                    
                   </div>
                 </td>
                 <td>

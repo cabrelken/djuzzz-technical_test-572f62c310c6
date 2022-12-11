@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Training;
-
+use DB;
 class UserController extends Controller
 {
     /**
@@ -14,23 +14,46 @@ class UserController extends Controller
      */
     public function index()
     {
-         $users = User::All();
-        // withcount():fonction prédefinie qui compte le nombre de ligne de la table associative
+        //  $users = User::All();
+        
+        $users = User::join('training_user', 'users.id', '=', 'training_user.user_id')
+        ->join('trainings', 'trainings.id', '=', 'training_user.training_id')
+        ->get()
+        ->groupBy('user_id');
+
+        $newUsers = [];
+
+        foreach ( $users as $trainings) {
+            foreach ($trainings as  $training) {
+               
+            }
+        }
       
-        // $users = User::join('training_user', 'users.id', '=', 'training_user.user_id')
-        // ->join('trainings', 'trainings.id', '=', 'training_user.training_id')
-        // // ->orderByRaw('SUM(price)')
-        // // ->groupBy('training_user.user_id')
-        // ->get();
-
-        //$users = User::select('users.*','training_user.*', 'trainings.*', 'users.id As idUser', 'trainings.price As prices', Training::raw('SUM(trainings.price) as TotalDeposits'))
-         //->leftJoin('training_user', 'training_user.user_id', '=', 'users.id')
-        // ->leftJoin('trainings', 'training_user.training_id', '=', 'trainings.id')
-         //->groupby('training_user.user_id')
-         //->get();
-
         return response()->json($users);
 
+    }
+
+    public function training_user($id)
+    {
+       
+        $usersTraining = User_Training::where('user_id',$id)->count();
+        return response()->json($usersTraining);
+    }
+
+    public function Userprice($id)
+    {
+        $user = User::find($id)->get();
+        $trainingUser = User_Training::where('user_id',$user[0]->id)->select('training_id')->get();
+       // $price = $trainingUser->price()->get();
+       
+       $total = 0;
+        foreach($trainingUser as $training)
+        {
+            $price = Training::where('id',$training->training_id)->select('price')->get();
+            $total = $total + $price[0]->price;
+        }
+       
+        dd($total);
     }
 
     /**
